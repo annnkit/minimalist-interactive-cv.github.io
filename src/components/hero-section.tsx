@@ -1,4 +1,4 @@
-import { ArrowDown, Flower } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
@@ -53,9 +53,9 @@ export function HeroSection() {
           style={{
             zIndex: 1,
             background:
-              "radial-gradient(circle at 50% 45%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.04) 40%, rgba(240,240,240,0.20) 70%, rgba(255,255,255,0.85) 100%)",
-            backdropFilter: "blur(18px)",
-            WebkitBackdropFilter: "blur(18px)",
+              "radial-gradient(circle at 50% 45%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.08) 40%, rgba(240,240,240,0.25) 70%, rgba(255,255,255,0.9) 100%)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
             transition: "opacity 0.8s"
           }}
         />
@@ -107,24 +107,6 @@ export function HeroSection() {
       >
         <ArrowDown className="h-8 w-8 text-[#ea384c]" />
       </a>
-      
-      {/* Floating cherry blossom icons for decoration */}
-      <div className="absolute inset-0 pointer-events-none z-[2]">
-        {[...Array(5)].map((_, i) => (
-          <Flower
-            key={i}
-            className={`absolute text-[#FFDEE2] animate-float-${i + 1}`}
-            style={{
-              width: `${Math.random() * 2 + 2.5}rem`,
-              height: `${Math.random() * 2 + 2.5}rem`,
-              top: `${Math.random() * 90}%`,
-              left: `${Math.random() * 95}%`,
-              animation: `float ${Math.random() * 3 + 2}s ease-in-out infinite`,
-              opacity: 0.6,
-            }}
-          />
-        ))}
-      </div>
     </section>
   );
 }
