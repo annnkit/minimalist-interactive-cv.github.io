@@ -69,8 +69,8 @@ export function AboutSection() {
             </div>
             <div className="relative h-[200px] overflow-hidden rounded-xl shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1469041797191-50ace28483c3"
-                alt="Rajasthan Desert"
+                src="/public/lovable-uploads/75de2943-365c-4be1-807d-691d240e89fc.png"
+                alt="Marketing and Business Strategy Brainstorming"
                 className="w-full h-full object-cover"
               />
             </div>
