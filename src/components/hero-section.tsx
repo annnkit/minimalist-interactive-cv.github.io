@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-16">
-      <div className="max-w-3xl mx-auto">
-        <div className="mb-8 relative w-40 h-40 mx-auto overflow-hidden rounded-full border-4 border-primary">
+    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-16 hero-pattern">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="mb-8 relative w-48 h-48 mx-auto overflow-hidden rounded-full border-4 border-primary shadow-xl">
           <img
             src="/placeholder.svg"
             alt="Ankit Jangir"
@@ -14,20 +14,25 @@ export function HeroSection() {
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-          Ankit Jangir
+          Code. Create. Connect.
         </h1>
-        <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          Computer Science Engineer & AI Enthusiast
+        <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 animate-fade-in" 
+            style={{ animationDelay: "0.2s" }}>
+          The Story of a Creator from Rajasthan
         </h2>
-        <p className="text-lg mb-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          Specializing in AI-driven applications, machine learning solutions, and data analytics.
+        <p className="text-lg mb-8 max-w-2xl mx-auto animate-fade-in leading-relaxed" 
+           style={{ animationDelay: "0.4s" }}>
+          Like Monkey D. Luffy chasing his dream of becoming the Pirate King, 
+          I chase the dream of creating technology that makes a difference. 
+          Join me on this journey of constant growth and innovation.
         </p>
-        <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <Button asChild size="lg">
-            <a href="#contact">Get in Touch</a>
+        <div className="flex flex-wrap justify-center gap-4 animate-fade-in" 
+             style={{ animationDelay: "0.6s" }}>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <a href="#about">Discover My Story</a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#projects">View Projects</a>
+            <a href="#projects">View My Creations</a>
           </Button>
         </div>
       </div>

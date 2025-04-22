@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,16 +13,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 260 70% 75%;
+    --primary: 15 89% 55%;  /* Luffy's vest red */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 32 95% 65%;  /* Straw hat yellow */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 260 70% 95%;
+    --accent: 198 93% 60%;  /* Ocean blue */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -55,10 +54,10 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 260 70% 65%;
+    --primary: 15 89% 55%;  /* Keeping Luffy's red */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 32 95% 45%;  /* Darker straw hat */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -122,5 +121,17 @@
   .scale-in-section {
     @apply opacity-0;
     animation: scale-in 0.5s ease forwards;
+  }
+
+  .story-gradient {
+    @apply bg-gradient-to-r from-primary/10 via-transparent to-transparent;
+  }
+
+  .hero-pattern {
+    background-image: url('https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply before:content-[''] before:absolute before:inset-0 before:bg-background/90;
   }
 }

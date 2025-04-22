@@ -1,5 +1,5 @@
 
-import { FileText } from "lucide-react";
+import { FileText, Music, Code, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function AboutSection() {
@@ -7,24 +7,44 @@ export function AboutSection() {
     <section id="about" className="section">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          About <span className="text-primary">Me</span>
+          The <span className="text-primary">Journey</span> So Far
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <p className="text-lg mb-4">
-              I'm a Computer Science Engineer with expertise in AI and machine learning. 
-              I'm passionate about creating innovative solutions to complex problems using cutting-edge technologies.
-            </p>
-            <p className="text-lg mb-4">
-              My journey began at Lovely Professional University where I pursued my Bachelor's in Technology, and since then
-              I've been developing AI-driven applications that provide real value to users.
-            </p>
-            <p className="text-lg mb-6">
-              I specialize in developing machine learning models, anomaly detection systems, and data analytics solutions
-              that help businesses make informed decisions.
-            </p>
-            
+          <div className="space-y-6">
+            <div className="story-gradient p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <Music className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-semibold">First Language: Music</h3>
+              </div>
+              <p className="text-muted-foreground">
+                Through singing, I found expression, emotion, and connection. 
+                But soon, another language called to me.
+              </p>
+            </div>
+
+            <div className="story-gradient p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <Code className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-semibold">The Code Journey</h3>
+              </div>
+              <p className="text-muted-foreground">
+                Programming became my way of building bridges—between problems and solutions, 
+                people and purpose.
+              </p>
+            </div>
+
+            <div className="story-gradient p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <Brain className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-semibold">The Growth Mindset</h3>
+              </div>
+              <p className="text-muted-foreground">
+                Like Goku's philosophy—there's always a higher form to unlock. 
+                I build because I believe in making technology feel like a friend.
+              </p>
+            </div>
+
             <Button variant="outline" className="flex items-center gap-2">
               <FileText className="h-4 w-4" />
               <a href="#" download className="inline-block">
@@ -33,11 +53,18 @@ export function AboutSection() {
             </Button>
           </div>
           
-          <div className="flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-xl shadow-lg">
+          <div className="grid gap-4">
+            <div className="relative h-[300px] overflow-hidden rounded-xl shadow-lg">
               <img
-                src="/placeholder.svg"
-                alt="Ankit Jangir"
+                src="https://images.unsplash.com/photo-1466442929976-97f336a657be"
+                alt="Rajasthan Architecture"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative h-[200px] overflow-hidden rounded-xl shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1469041797191-50ace28483c3"
+                alt="Rajasthan Desert"
                 className="w-full h-full object-cover"
               />
             </div>
