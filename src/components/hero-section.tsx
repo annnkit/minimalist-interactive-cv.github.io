@@ -43,7 +43,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center">
         {/* Background image with reduced size, centered, and fade-out edges */}
         <img
-          src="images/samurai-near-the-tree.jpg"
+          src="https://motionbgs.com/samurai-near-the-tree"
           alt="Cherry Blossoms"
           className="w-[95%] h-[95%] object-cover absolute rounded-2xl hero-image-fade"
         />
