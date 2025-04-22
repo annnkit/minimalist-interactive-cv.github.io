@@ -43,7 +43,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center">
         {/* Background image with reduced size, centered, and fade-out edges */}
         <img
-          src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
+          src="images/samurai-near-the-tree.jpg"
           alt="Cherry Blossoms"
           className="w-[95%] h-[95%] object-cover absolute rounded-2xl hero-image-fade"
         />
@@ -66,7 +66,7 @@ export function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-full">
         <div className="mb-8 relative w-48 h-48 mx-auto overflow-hidden rounded-full border-4 shadow-xl bg-gradient-to-br from-[#F2FCE2] to-white/50 hover:scale-105 transition-transform duration-300 border-[#ea384c] dark:border-[#ea384c]">
           <img
-            src="/placeholder.svg"
+            src="images/Screenshot 2024-12-04 022709.png"
             alt="Ankit Jangir"
             className="w-full h-full object-cover"
           />
