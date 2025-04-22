@@ -1,5 +1,5 @@
 
-import { ArrowDown, Sakura } from "lucide-react";
+import { ArrowDown, Flower } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -67,10 +67,10 @@ export function HeroSection() {
         <ArrowDown className="h-8 w-8 text-[#ea384c]" />
       </a>
       
-      {/* Floating Sakura icons for decoration */}
+      {/* Floating cherry blossom icons for decoration */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(5)].map((_, i) => (
-          <Sakura
+          <Flower
             key={i}
             className={`absolute text-[#FFDEE2] w-${Math.random() * 4 + 2} h-${Math.random() * 4 + 2} animate-float-${i + 1}`}
             style={{
