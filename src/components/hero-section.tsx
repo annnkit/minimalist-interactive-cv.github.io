@@ -1,54 +1,64 @@
-
 import { ArrowDown, Flower } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+
+/**
+ * Radial blur/opaque overlay for hero background
+ * - Denser/opaque at edges, lighter/blurred in the center
+ * - Does not affect layout; the main content remains centered above it
+ */
 
 export function HeroSection() {
   const petalsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Create falling cherry blossom petals
+    // Cherry blossom petals floating effect (unchanged)
     const createPetal = () => {
       if (!petalsRef.current) return;
-      
+
       const petal = document.createElement("div");
       petal.classList.add("cherry-petal");
       petal.style.left = `${Math.random() * 100}%`;
       petal.style.animationDuration = `${Math.random() * 5 + 5}s`;
       petal.style.opacity = `${Math.random() * 0.6 + 0.4}`;
       petal.style.transform = `scale(${Math.random() * 0.4 + 0.6})`;
-      
+
       petalsRef.current.appendChild(petal);
-      
+
       setTimeout(() => {
         if (petal && petal.parentNode) {
           petal.parentNode.removeChild(petal);
         }
       }, 10000);
     };
-    
-    // Create initial petals
+
     for (let i = 0; i < 20; i++) {
       setTimeout(() => createPetal(), Math.random() * 3000);
     }
-    
-    // Continue creating petals
     const interval = setInterval(createPetal, 300);
-    
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center px-4 pt-16 overflow-hidden">
+      {/* --- Background Layer: Opaque gradient + blur over image --- */}
       <div className="absolute inset-0 z-0 spring-background">
+        {/* Background image */}
         <img
           src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
           alt="Cherry Blossoms"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/80 to-white/90 dark:from-background/80 dark:via-background/90 dark:to-background/95" />
+
+        {/* Radial gradient mask + blur overlay (brighter/blurred at center, more opaque at edges) */}
+        <div
+          className="
+            absolute inset-0 pointer-events-none
+            hero-bg-radial-mask
+          "
+        />
       </div>
-      
+
       <div ref={petalsRef} className="petals-container absolute inset-0 pointer-events-none z-[1] overflow-hidden" />
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center">
@@ -57,13 +67,13 @@ export function HeroSection() {
             <img
               src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
               alt="Cherry Blossoms"
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl border-4 border-[#ea384c] shadow-xl" // red border
             />
           </div>
         </div>
-        
+
         <div className="w-full md:w-1/2 text-center md:text-left md:pl-8">
-          <div className="mb-8 relative w-48 h-48 mx-auto md:mx-0 overflow-hidden rounded-full border-4 border-[#FFDEE2] shadow-xl bg-gradient-to-br from-[#F2FCE2] to-white/50 hover:scale-105 transition-transform duration-300 dark:border-[#FFDEE2]/70 dark:from-[#FFDEE2]/30 dark:to-background/30">
+          <div className="mb-8 relative w-48 h-48 mx-auto md:mx-0 overflow-hidden rounded-full border-4 border-[#ea384c] shadow-xl bg-gradient-to-br from-[#F2FCE2] to-white/50 hover:scale-105 transition-transform duration-300 dark:border-[#ea384c]/80 dark:from-[#FFDEE2]/30 dark:to-background/30">
             <img
               src="/placeholder.svg"
               alt="Ankit Jangir"
