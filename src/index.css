@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    /* Base theme variables */
+    /* Base theme variables - replacing blue with red */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 15 89% 55%;
+    --primary: 348 89% 55%; /* Vibrant red color */
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 85% 60%;
+    --secondary: 348 85% 60%; /* Slightly different red for secondary */
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
+    --muted: 348 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 198 93% 60%;
+    --accent: 348 93% 60%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 260 70% 75%;
+    --border: 348 31.8% 91.4%;
+    --input: 348 31.8% 91.4%;
+    --ring: 348 70% 75%; /* Red ring color */
     --radius: 0.75rem;
 
     /* Sidebar variables */
@@ -36,42 +36,43 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Japanese Spring Theme */
+    /* Japanese Seasonal Colors - update to red tones */
     --spring-pink: 348 100% 94%;
-    --spring-green: 90 67% 94%;
+    --spring-green: 348 67% 94%;
     --spring-white: 0 0% 100%;
 
-    /* Japanese Autumn Theme */
-    --autumn-primary: 355 83% 57%;
-    --autumn-secondary: 36 80% 67%;
-    --autumn-tertiary: 43 68% 62%;
+    /* Japanese Autumn Theme - adjust to red */
+    --autumn-primary: 348 83% 57%;
+    --autumn-secondary: 348 80% 67%;
+    --autumn-tertiary: 348 68% 62%;
     
-    /* Default theme colors for first load */
+    /* Default theme colors */
     --theme-primary: var(--spring-pink);
     --theme-secondary: var(--spring-green);
     --theme-tertiary: var(--spring-white);
   }
 
   .dark {
+    /* Dark mode variables - maintaining red theme */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 15 89% 55%;
+    --primary: 348 89% 55%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 85% 45%;
+    --secondary: 348 85% 45%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 260 70% 25%;
+    --accent: 348 70% 25%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 260 70% 65%;
+    --ring: 348 70% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 260 70% 65%;
