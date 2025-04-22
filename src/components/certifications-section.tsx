@@ -1,3 +1,4 @@
+
 import { Award, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -34,28 +35,30 @@ export function CertificationsSection() {
   ];
 
   return (
-    <section id="certifications" className="section bg-secondary/20">
-      <div className="max-w-5xl mx-auto">
+    <section id="certifications" className="section bg-autumn-secondary/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-autumn-pattern opacity-20"></div>
+      
+      <div className="max-w-5xl mx-auto relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          <span className="text-primary">Certifications</span> & Achievements
+          <span className="text-autumn-primary">Certifications</span> & Achievements
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
-              <Award className="w-6 h-6 mr-2 text-primary" /> Certifications
+              <Award className="w-6 h-6 mr-2 text-autumn-primary" /> Certifications
             </h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
-                <Card key={index} className="group hover:border-primary transition-all border border-primary/20">
-                  <CardContent className="p-4 bg-secondary/10">
+                <Card key={index} className="group hover:border-autumn-primary transition-all border border-autumn-primary/20 bg-white/80 backdrop-blur-sm">
+                  <CardContent className="p-4 bg-autumn-secondary/5">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium">{cert.title}</h4>
                       <span className="text-sm text-muted-foreground">{cert.date}</span>
                     </div>
                     <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                     <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity text-right">
-                      <a href="#" className="text-primary text-sm inline-flex items-center hover:underline">
+                      <a href="#" className="text-autumn-primary text-sm inline-flex items-center hover:underline">
                         View Certificate <ExternalLink className="ml-1 w-3 h-3" />
                       </a>
                     </div>
@@ -67,11 +70,11 @@ export function CertificationsSection() {
           
           <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
-              <Award className="w-6 h-6 mr-2 text-primary" /> Achievements
+              <Award className="w-6 h-6 mr-2 text-autumn-primary" /> Achievements
             </h3>
             <div className="space-y-4">
               {achievements.map((achievement, index) => (
-                <Card key={index} className="group hover:border-primary transition-all">
+                <Card key={index} className="group hover:border-autumn-primary transition-all bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-4">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium">{achievement.title}</h4>

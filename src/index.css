@@ -1,18 +1,20 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* Base theme variables */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 15 89% 55%;  /* Luffy's energetic red */
+    --primary: 15 89% 55%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 85% 60%;  /* Ultra Instinct blue */
+    --secondary: 210 85% 60%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -25,6 +27,7 @@
     --ring: 260 70% 75%;
     --radius: 0.75rem;
 
+    /* Sidebar variables */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 260 70% 75%;
@@ -35,45 +38,41 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Japanese Spring Theme */
-    --spring-pink: #FFDEE2;
-    --spring-green: #F2FCE2;
-    --spring-white: #fff;
+    --spring-pink: 348 100% 94%;
+    --spring-green: 90 67% 94%;
+    --spring-white: 0 0% 100%;
 
     /* Japanese Autumn Theme */
-    --autumn-red: #ea384c;
-    --autumn-orange: #D2691E;
-    --autumn-brown: #8B4513;
+    --autumn-primary: 355 83% 57%;
+    --autumn-secondary: 36 80% 67%;
+    --autumn-tertiary: 43 68% 62%;
+    
+    /* Default theme colors for first load */
+    --theme-primary: var(--spring-pink);
+    --theme-secondary: var(--spring-green);
+    --theme-tertiary: var(--spring-white);
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 15 89% 55%;  /* Keeping Luffy's red */
+    --primary: 15 89% 55%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 85% 45%;  /* Darker Ultra Instinct */
+    --secondary: 210 85% 45%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 260 70% 25%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 260 70% 65%;
-
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 260 70% 65%;
@@ -82,6 +81,16 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Japanese Spring Theme Dark Mode */
+    --spring-pink: 348 100% 75%;
+    --spring-green: 90 45% 65%;
+    --spring-white: 210 40% 85%;
+    
+    /* Japanese Autumn Theme Dark Mode */
+    --autumn-primary: 355 83% 67%;
+    --autumn-secondary: 36 80% 57%;
+    --autumn-tertiary: 43 68% 52%;
   }
 }
 
@@ -94,6 +103,32 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     scroll-behavior: smooth;
+    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+  }
+  
+  /* Theme transition classes */
+  body.spring-theme {
+    --theme-primary: var(--spring-pink);
+    --theme-secondary: var(--spring-green);
+    --theme-tertiary: var(--spring-white);
+  }
+  
+  body.autumn-theme {
+    --theme-primary: var(--autumn-primary);
+    --theme-secondary: var(--autumn-secondary);
+    --theme-tertiary: var(--autumn-tertiary);
+  }
+  
+  /* Section transition */
+  section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  section.section-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -129,7 +164,7 @@
   }
 
   .about-gradient {
-    @apply bg-gradient-to-r from-secondary/20 via-primary/10 to-transparent;
+    @apply bg-gradient-to-r from-autumn-secondary/20 via-autumn-primary/10 to-transparent;
   }
 
   .hover-scale {
@@ -153,10 +188,92 @@
   }
 
   .autumn-gradient {
-    @apply bg-gradient-to-r from-[#F97316] via-[#ea384c] to-[#8B4513];
+    @apply bg-gradient-to-r from-[#ea384c] via-[#ea384c] to-[#D2691E];
   }
 
   .japanese-blur {
     @apply backdrop-blur-sm bg-white/30;
+  }
+  
+  /* Spring theme colors */
+  .bg-spring-primary {
+    background-color: hsl(var(--spring-pink));
+  }
+  
+  .text-spring-primary {
+    color: hsl(var(--spring-pink));
+  }
+  
+  .border-spring-primary {
+    border-color: hsl(var(--spring-pink));
+  }
+  
+  /* Autumn theme colors */
+  .bg-autumn-primary {
+    background-color: hsl(var(--autumn-primary));
+  }
+  
+  .text-autumn-primary {
+    color: hsl(var(--autumn-primary));
+  }
+  
+  .border-autumn-primary {
+    border-color: hsl(var(--autumn-primary));
+  }
+  
+  .bg-autumn-secondary {
+    background-color: hsl(var(--autumn-secondary));
+  }
+  
+  /* Cherry blossom petals animation */
+  .petals-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .cherry-petal {
+    position: absolute;
+    top: -50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='%23FFDEE2' d='M12 2C7.58 2 4 5.58 4 10c0 2.52 1.16 4.74 2.97 6.19L12 22l5.03-5.81C18.84 14.74 20 12.52 20 10c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    animation: falling linear forwards;
+  }
+  
+  @keyframes falling {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(0.8);
+      opacity: 0.8;
+    }
+    25% {
+      transform: translateY(25vh) translateX(30px) rotate(45deg) scale(0.7);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(50vh) translateX(-15px) rotate(90deg) scale(0.6);
+      opacity: 0.6;
+    }
+    75% {
+      transform: translateY(75vh) translateX(30px) rotate(135deg) scale(0.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(100vh) translateX(-15px) rotate(180deg) scale(0.4);
+      opacity: 0.4;
+    }
+  }
+  
+  /* Float animation for cherry blossom icons */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(10deg);
+    }
   }
 }

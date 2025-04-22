@@ -8,14 +8,18 @@ import { ProjectsSection } from "@/components/projects-section";
 import { CertificationsSection } from "@/components/certifications-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
+import { ThemeObserver } from "@/components/theme-observer";
 
 const Index = () => {
   return (
     <ThemeProvider defaultTheme="light">
+      <ThemeObserver />
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
-          <HeroSection />
+          <section id="hero">
+            <HeroSection />
+          </section>
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
