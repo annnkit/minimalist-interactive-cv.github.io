@@ -39,13 +39,13 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 overflow-hidden">
-      {/* --- Background Layer: Full image, masked at edges with radial opacity & blur --- */}
-      <div className="absolute inset-0 z-0 w-full h-full">
-        {/* Background image */}
+      {/* --- Background Layer: Slightly reduced image size --- */}
+      <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center">
+        {/* Background image with reduced size and centered */}
         <img
           src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
           alt="Cherry Blossoms"
-          className="w-full h-full object-cover absolute inset-0"
+          className="w-[95%] h-[95%] object-cover absolute rounded-2xl"
         />
         {/* Radial gradient mask & blur overlay */}
         <div
