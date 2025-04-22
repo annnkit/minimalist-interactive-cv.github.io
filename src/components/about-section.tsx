@@ -1,5 +1,5 @@
 
-import { FileText, Music, Code, Brain } from "lucide-react";
+import { FileText, Brain, Rocket, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function AboutSection() {
@@ -12,40 +12,40 @@ export function AboutSection() {
         
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-            <div className="story-gradient p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <Music className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-semibold">First Language: Music</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Through singing, I found expression, emotion, and connection. 
-                But soon, another language called to me.
-              </p>
-            </div>
-
-            <div className="story-gradient p-6 rounded-lg">
+            <div className="about-gradient p-6 rounded-lg">
               <div className="flex items-center gap-3 mb-4">
                 <Code className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-semibold">The Code Journey</h3>
+                <h3 className="text-xl font-semibold">Code as a Bridge</h3>
               </div>
               <p className="text-muted-foreground">
                 Programming became my way of building bridges—between problems and solutions, 
-                people and purpose.
+                people and purpose. Like Luffy's determination, I push beyond limits.
               </p>
             </div>
 
-            <div className="story-gradient p-6 rounded-lg">
+            <div className="about-gradient p-6 rounded-lg">
               <div className="flex items-center gap-3 mb-4">
-                <Brain className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-semibold">The Growth Mindset</h3>
+                <Brain className="h-6 w-6 text-secondary" />
+                <h3 className="text-xl font-semibold">AI & Machine Learning</h3>
               </div>
               <p className="text-muted-foreground">
-                Like Goku's philosophy—there's always a higher form to unlock. 
-                I build because I believe in making technology feel like a friend.
+                Venturing into ML, I've built systems predicting customer behavior, detecting deep fakes, 
+                and fighting fraud. Each project pushes the boundaries of what's possible.
               </p>
             </div>
 
-            <Button variant="outline" className="flex items-center gap-2">
+            <div className="about-gradient p-6 rounded-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <Rocket className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-semibold">Startup Mindset</h3>
+              </div>
+              <p className="text-muted-foreground">
+                With Tap It, I'm revolutionizing networking through smart digital business cards. 
+                Like Goku's Ultra Instinct, it's about transcending limitations and finding new possibilities.
+              </p>
+            </div>
+
+            <Button variant="outline" className="flex items-center gap-2 border-secondary hover:bg-secondary/10">
               <FileText className="h-4 w-4" />
               <a href="#" download className="inline-block">
                 Download Resume

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,10 +14,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 15 89% 55%;  /* Luffy's vest red */
+    --primary: 15 89% 55%;  /* Luffy's energetic red */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 32 95% 65%;  /* Straw hat yellow */
+    --secondary: 210 85% 60%;  /* Ultra Instinct blue */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -57,7 +58,7 @@
     --primary: 15 89% 55%;  /* Keeping Luffy's red */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 32 95% 45%;  /* Darker straw hat */
+    --secondary: 210 85% 45%;  /* Darker Ultra Instinct */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -132,6 +133,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    @apply before:content-[''] before:absolute before:inset-0 before:bg-background/90;
+    background-attachment: fixed;
+    @apply before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-background/95 before:via-background/80 before:to-background/95;
+  }
+
+  .about-gradient {
+    @apply bg-gradient-to-r from-secondary/20 via-primary/10 to-transparent;
   }
 }
