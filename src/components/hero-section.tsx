@@ -41,11 +41,11 @@ export function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 overflow-hidden">
       {/* --- Background Layer: Slightly reduced image size --- */}
       <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center">
-        {/* Background image with reduced size and centered */}
+        {/* Background image with reduced size, centered, and fade-out edges */}
         <img
           src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151"
           alt="Cherry Blossoms"
-          className="w-[95%] h-[95%] object-cover absolute rounded-2xl"
+          className="w-[95%] h-[95%] object-cover absolute rounded-2xl hero-image-fade"
         />
         {/* Radial gradient mask overlay */}
         <div
