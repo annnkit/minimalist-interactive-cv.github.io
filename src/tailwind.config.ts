@@ -52,11 +52,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
         },
-        // Update colors to use vibrant red
         purple: {
           light: "#ff6b6b",
-          DEFAULT: "#ea384c",
-          dark: "#c62828"
+          DEFAULT: "#8B0000",
+          dark: "#5D0000"
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -68,16 +67,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))"
         },
-        // Japanese Seasonal Colors
         spring: {
           pink: "#FFDEE2",
           green: "#F2FCE2",
           white: "#FFFFFF",
         },
         autumn: {
-          primary: "#ea384c",
-          secondary: "#D2691E",
-          tertiary: "#FCB13A",
+          primary: "#8B0000",
+          secondary: "#6B0F2C",
+          tertiary: "#4B0082"
         }
       },
       borderRadius: {
