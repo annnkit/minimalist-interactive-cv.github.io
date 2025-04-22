@@ -1,4 +1,3 @@
-
 import { FileText, Brain, Rocket, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -63,8 +62,8 @@ export function AboutSection() {
           <div className="grid gap-4">
             <div className="relative h-[300px] overflow-hidden rounded-xl shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1466442929976-97f336a657be"
-                alt="Rajasthan Architecture"
+                src="/public/lovable-uploads/f14ba744-fe12-406f-b92f-b5e03037a699.png"
+                alt="Rajasthan Fort with Elephants"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -104,4 +103,3 @@ export function AboutSection() {
     </section>
   );
 }
-
