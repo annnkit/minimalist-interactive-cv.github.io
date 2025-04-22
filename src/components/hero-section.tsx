@@ -47,15 +47,13 @@ export function HeroSection() {
           alt="Cherry Blossoms"
           className="w-[95%] h-[95%] object-cover absolute rounded-2xl"
         />
-        {/* Radial gradient mask & blur overlay */}
+        {/* Radial gradient mask overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             zIndex: 1,
             background:
               "radial-gradient(circle at 50% 45%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.08) 40%, rgba(240,240,240,0.25) 70%, rgba(255,255,255,0.9) 100%)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
             transition: "opacity 0.8s"
           }}
         />
