@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,9 +54,9 @@ export default {
           foreground: "hsl(var(--card-foreground))"
         },
         purple: {
-          light: "#ff6b6b",
-          DEFAULT: "#8B0000",
-          dark: "#5D0000"
+          light: "#9b87f5",
+          DEFAULT: "#7E69AB",
+          dark: "#6E59A5"
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -67,15 +68,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))"
         },
+        // Japanese Seasonal Colors
         spring: {
           pink: "#FFDEE2",
           green: "#F2FCE2",
           white: "#FFFFFF",
         },
         autumn: {
-          primary: "#8B0000",
-          secondary: "#6B0F2C",
-          tertiary: "#4B0082"
+          primary: "#ea384c",
+          secondary: "#D2691E",
+          tertiary: "#FCB13A",
         }
       },
       borderRadius: {

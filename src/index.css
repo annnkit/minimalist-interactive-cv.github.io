@@ -2,35 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  :root {
-    /* Update primary colors to bloody red */
-    --primary: 0 100% 25%; /* Dark bloody red */
-    --primary-foreground: 0 0% 0%; /* Black text */
-    --secondary: 345 80% 25%; /* Deep blood red */
-    --secondary-foreground: 0 0% 0%; /* Black text */
-    --accent: 345 70% 20%; /* Darker bloody red for accents */
-    --accent-foreground: 0 0% 0%; /* Black text */
-
-    /* Japanese Autumn Theme - adjust to bloody red */
-    --autumn-primary: 0 100% 27%; /* Dark bloody red */
-    --autumn-secondary: 345 80% 25%; /* Deep blood red */
-    --autumn-tertiary: 330 70% 20%; /* Dark purple-red */
-  }
-
-  .dark {
-    /* Dark mode bloody red configuration */
-    --primary: 0 100% 35%; /* Slightly brighter bloody red */
-    --primary-foreground: 0 0% 0%; /* Black text */
-    --secondary: 345 80% 35%; /* Deep blood red */
-    --secondary-foreground: 0 0% 0%; /* Black text */
-    --accent: 345 70% 30%; /* Darker bloody red for accents */
-    --accent-foreground: 0 0% 0%; /* Black text */
-
-    /* Dark mode autumn theme */
-    --autumn-primary: 0 100% 37%; /* Dark bloody red */
-    --autumn-secondary: 345 80% 35%; /* Deep blood red */
-    --autumn-tertiary: 330 70% 30%; /* Dark purple-red */
-  }
-}
