@@ -6,32 +6,23 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
     --primary: 15 89% 55%;  /* Luffy's energetic red */
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 85% 60%;  /* Ultra Instinct blue */
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 198 93% 60%;  /* Ocean blue */
+    --accent: 198 93% 60%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 260 70% 75%;
-
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
@@ -42,6 +33,16 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Japanese Spring Theme */
+    --spring-pink: #FFDEE2;
+    --spring-green: #F2FCE2;
+    --spring-white: #fff;
+
+    /* Japanese Autumn Theme */
+    --autumn-red: #ea384c;
+    --autumn-orange: #F97316;
+    --autumn-brown: #8B4513;
   }
 
   .dark {
@@ -144,6 +145,18 @@
   }
 
   .hero-image-fade {
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0));
+  }
+
+  .spring-gradient {
+    @apply bg-gradient-to-r from-[#FFDEE2] via-[#F2FCE2] to-white;
+  }
+
+  .autumn-gradient {
+    @apply bg-gradient-to-r from-[#F97316] via-[#ea384c] to-[#8B4513];
+  }
+
+  .japanese-blur {
+    @apply backdrop-blur-sm bg-white/30;
   }
 }
