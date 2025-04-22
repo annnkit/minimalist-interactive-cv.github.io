@@ -1,4 +1,3 @@
-
 import { Award, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -35,7 +34,7 @@ export function CertificationsSection() {
   ];
 
   return (
-    <section id="certifications" className="section bg-secondary/50">
+    <section id="certifications" className="section bg-secondary/20">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           <span className="text-primary">Certifications</span> & Achievements
@@ -48,8 +47,8 @@ export function CertificationsSection() {
             </h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
-                <Card key={index} className="group hover:border-primary transition-all">
-                  <CardContent className="p-4">
+                <Card key={index} className="group hover:border-primary transition-all border border-primary/20">
+                  <CardContent className="p-4 bg-secondary/10">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium">{cert.title}</h4>
                       <span className="text-sm text-muted-foreground">{cert.date}</span>
