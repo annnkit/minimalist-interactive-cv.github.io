@@ -7,17 +7,20 @@ export function CertificationsSection() {
     {
       title: "Approximation Algorithms and Linear Programming",
       issuer: "University of Colorado Boulder",
-      date: "May 2023"
+      date: "May 2023",
+      url: "https://drive.google.com/file/d/1N8yrH75x6ibl2sQ7XEC4weN1TqqxB-SL/view?usp=drive_link"
     },
     {
-      title: "Generative AI for Everyone",
-      issuer: "DeepLearning.AI",
-      date: "December 2023" 
+      title: "The Complete JAA Certification Course",
+      issuer: "Udemy",
+      date: "April 2, 2025",
+      url: "https://drive.google.com/file/d/1o07tA1S-bgzJvJ-sMOXwIUQBvMKBqb7e/view?usp=drive_link"
     },
     {
-      title: "Generative AI with LLMs",
-      issuer: "Coursera",
-      date: "April 2023"
+      title: "DSA Self Paced Course",
+      issuer: "N/A",
+      date: "April 2023",
+      url: "https://drive.google.com/file/d/12TxC5bt8rAVLLGlrF4KZ2knCANNf1CXx/view?usp=drive_link"
     }
   ];
 
@@ -58,7 +61,7 @@ export function CertificationsSection() {
                     </div>
                     <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                     <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity text-right">
-                      <a href="#" className="text-autumn-primary text-sm inline-flex items-center hover:underline">
+                      <a href={cert.url} target="_blank" rel="noopener noreferrer" className="text-autumn-primary text-sm inline-flex items-center hover:underline">
                         View Certificate <ExternalLink className="ml-1 w-3 h-3" />
                       </a>
                     </div>
@@ -91,3 +94,4 @@ export function CertificationsSection() {
     </section>
   );
 }
+

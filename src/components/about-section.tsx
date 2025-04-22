@@ -1,3 +1,4 @@
+
 import { FileText, Brain, Rocket, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -51,9 +52,9 @@ export function AboutSection() {
               </p>
             </div>
 
-            <Button variant="outline" className="flex items-center gap-2 border-secondary hover:bg-secondary/10">
-              <FileText className="h-4 w-4" />
-              <a href="#" download className="inline-block">
+            <Button asChild variant="outline" className="flex items-center gap-2 border-secondary hover:bg-secondary/10">
+              <a href="https://drive.google.com/file/d/1efs40hyHS45yYkOFk5K6ey5VvsPEEWVj/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="inline-block">
+                <FileText className="h-4 w-4" />
                 Download Resume
               </a>
             </Button>
@@ -103,3 +104,4 @@ export function AboutSection() {
     </section>
   );
 }
+

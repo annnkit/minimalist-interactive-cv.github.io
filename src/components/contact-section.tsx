@@ -63,7 +63,7 @@ export function ContactSection() {
               <h3 className="text-lg font-semibold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
                 <a 
-                  href="https://www.linkedin.com/in/arjs/" 
+                  href="https://www.linkedin.com/in/aj5j" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-card hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-colors"
@@ -81,7 +81,7 @@ export function ContactSection() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://www.instagram.com/" 
+                  href="https://www.instagram.com/?hl=en" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-card hover:bg-primary hover:text-primary-foreground p-3 rounded-full transition-colors"
@@ -151,3 +151,4 @@ export function ContactSection() {
     </section>
   );
 }
+
