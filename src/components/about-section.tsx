@@ -1,11 +1,17 @@
-
 import { FileText, Brain, Rocket, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section">
-      <div className="max-w-4xl mx-auto">
+    <section id="about" className="section relative min-h-screen">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843"
+          alt="Autumn Forest Background"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
+      <div className="max-w-4xl mx-auto relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           The <span className="text-primary">Journey</span> So Far
         </h2>
