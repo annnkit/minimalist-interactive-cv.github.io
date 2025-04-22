@@ -6,7 +6,7 @@ export function AboutSection() {
     <section id="about" className="section relative min-h-screen">
       <div className="absolute inset-0 z-0">
         <img
-          src="images/samurai-near-the-tree.jpg"
+          src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843"
           alt="Autumn Forest Background"
           className="w-full h-full object-cover opacity-20"
         />
