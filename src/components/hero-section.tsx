@@ -71,14 +71,14 @@ export function HeroSection() {
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in bg-gradient-to-r from-[#ea384c] via-[#F97316] to-[#ea384c] bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in text-[#ea384c]">
           Code. Create. Connect.
         </h1>
-        <h2 className="text-xl md:text-2xl text-[#8B4513] mb-6 animate-fade-in hover:scale-105 transition-transform duration-300 dark:text-[#FFDEE2]" 
+        <h2 className="text-xl md:text-2xl text-black mb-6 animate-fade-in hover:scale-105 transition-transform duration-300" 
             style={{ animationDelay: "0.2s" }}>
           The Story of a Creator from Rajasthan
         </h2>
-        <p className="text-lg mb-8 max-w-2xl mx-auto animate-fade-in leading-relaxed text-[#4A5568] hover:scale-105 transition-transform duration-300 dark:text-[#F2FCE2]/90" 
+        <p className="text-lg mb-8 max-w-2xl mx-auto animate-fade-in leading-relaxed text-[#000000e6] hover:scale-105 transition-transform duration-300" 
           style={{ animationDelay: "0.4s" }}>
           Like Monkey D. Luffy chasing his dream of becoming the Pirate King, 
           I chase the dream of creating technology that makes a difference. 
@@ -87,11 +87,11 @@ export function HeroSection() {
         <div className="flex flex-wrap justify-center gap-4 animate-fade-in" 
           style={{ animationDelay: "0.6s" }}>
           <Button asChild size="lg" 
-            className="hover:scale-110 transition-transform duration-300 bg-gradient-to-r from-[#ea384c] to-[#F97316] hover:from-[#F97316] hover:to-[#ea384c]">
+            className="hover:scale-110 transition-transform duration-300 bg-[#ea384c] hover:bg-[#c41f37]">
             <a href="#about">Discover My Story</a>
           </Button>
           <Button asChild variant="outline" size="lg" 
-            className="hover:scale-110 transition-transform duration-300 border-[#FFDEE2] text-[#ea384c] hover:bg-[#FFDEE2]/10">
+            className="hover:scale-110 transition-transform duration-300 border-[#ea384c] text-[#ea384c] hover:bg-[#ea384c]/10">
             <a href="#projects">View My Creations</a>
           </Button>
         </div>
