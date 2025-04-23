@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { GokuThemeToggle } from "@/components/goku-theme-toggle";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -54,12 +54,12 @@ export function Header() {
               {item.name}
             </a>
           ))}
-          <ThemeToggle className="ml-2" />
+          <GokuThemeToggle className="ml-2" />
         </nav>
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center">
-          <ThemeToggle className="mr-2" />
+          <GokuThemeToggle className="mr-2" />
           <Button
             variant="ghost"
             size="sm"
